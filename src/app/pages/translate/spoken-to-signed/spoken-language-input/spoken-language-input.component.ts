@@ -22,7 +22,8 @@ export class SpokenLanguageInputComponent extends BaseComponent implements OnIni
   normalizedText$!: Observable<string>;
 
   text = new FormControl();
-  maxTextLength = 500;
+  //   text = "hello"
+  maxTextLength = 1000;
   detectedLanguage: string;
   spokenLanguage: string;
 
@@ -53,6 +54,7 @@ export class SpokenLanguageInputComponent extends BaseComponent implements OnIni
         skipWhile(text => !text), // Don't run on empty text, on app launch
         distinctUntilChanged((a, b) => a.trim() === b.trim()),
         tap(text => this.store.dispatch(new SetSpokenLanguageText(text))),
+        // tap(text => this.store.dispatch(new SetSpokenLanguageText("hello"))),
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();
