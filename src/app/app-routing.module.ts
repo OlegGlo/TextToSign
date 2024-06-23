@@ -1,13 +1,18 @@
 import {NgModule} from '@angular/core';
 import {NoPreloading, RouterModule, Routes} from '@angular/router';
 import {environment} from '../environments/environment';
+import {LandingPageComponent} from './pages/landing-page/landing-page.component';
 
 const routes: Routes = [
   // {path: '', loadChildren: () => import('./pages/translate/translate.module').then(m => m.TranslatePageModule)},
-  {path: '', loadChildren: () => import('./pages/main.module').then(m => m.MainPageModule)},
+  {path: '', loadChildren: () => import('./pages/landing-page/landing-page.module').then(m => m.LandingPageModule)},
   {
     path: 'playground',
     loadChildren: () => import('./pages/playground/playground.module').then(m => m.PlaygroundPageModule),
+  },
+  {
+    path: 'translate',
+    loadChildren: () => import('./pages/translate/translate.module').then(m => m.TranslatePageModule),
   },
   {
     path: 'benchmark',
