@@ -91,4 +91,8 @@ export class SpokenLanguageInputComponent extends BaseComponent implements OnIni
   setDetectedLanguage() {
     this.store.dispatch(new SetSpokenLanguage(this.detectedLanguage));
   }
+
+  onChunkProcessed() {
+    this.translateService.nextChunk();
+  }
 }

@@ -26,12 +26,12 @@ export class LandingPageComponent {
     this.http.post('http://127.0.0.1:5000/get-lyrics', payload).subscribe({
       next: (response: any) => {
         console.log('Lyrics:', response.lyrics); // Adjust 'lyrics' if the key is different
-        this.translateService.setSpokenLanguageText(response.lyrics);
+        this.translateService.setChunks(response.lyrics);
         this.router.navigate(['/translate']);
       },
       error: error => {
         console.error('Error fetching lyrics:', error);
-        // this.router.navigate(['/translate']);
+        this.router.navigate(['/translate']);
       },
     });
   }
