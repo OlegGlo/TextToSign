@@ -1,15 +1,11 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="primary">
-      <!-- <ntkme-github-button user="sign" repo="translate" [count]="true" size="large" /> -->
+      <ntkme-github-button user="sign" repo="translate" [count]="true" size="large" />
     </ion-buttons>
-    <ion-title>MASL</ion-title>
+    <ion-title>{{ 'translate.title' | transloco }}<sup id="version" matTooltip="Alpha">α</sup></ion-title>
   </ion-toolbar>
 </ion-header>
-
-<div class="testing this" style="background-color: yellow; color: white; padding: 20px; font-size: 24px">
-  This is a div with white text and a yellow background.
-</div>
 
 <ion-content [fullscreen]="true">
   <div class="container">
