@@ -4,6 +4,9 @@
   <i>
     Revolutionizing Sign Language Communication with Cutting-Edge Real-Time Translation Models.
   </i>
+  <br>
+  <br>
+  Project @ UC Berkeley AI Hackathon 2024
 </p>
 
 <p align="center">
